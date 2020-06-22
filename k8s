@@ -1,0 +1,38 @@
+# Kubernetes
+alias k="kubectl"
+alias kg="kubectl get"
+alias ke="kubectl exec"
+alias keit="kubectl exec -it"
+
+alias kapp="kubectl apply -f"
+alias kdel="kubectl delete -f"
+
+alias kctx="kubectl config current-context"
+
+alias kp="kubectl get pod --sort-by=.status.startTime"
+alias kpst="kubectl get pods -o wide --sort-by=.status.startTime"
+alias kpsn="kubectl get pods -o wide --sort-by=.spec.nodeName"
+alias kpsp="kubectl get pod -o wide --sort-by=.metadata.name"
+alias kpcls="kubectl delete pod --field-selector=status.phase==Succeeded"
+alias kpsys="kubectl get pod -n kube-system --sort-by=.status.startTime"
+
+alias kj="kubectl get jobs"
+alias kjst="kubectl get jobs --sort-by=.status.startTime"
+alias kymlj="kubectl get jobs $1 -o yaml"
+alias kymlp="kubectl get pod $1 -o yaml"
+alias kymld="kubectl get deploy $1 -o yaml"
+
+alias kcj="kubectl get cronjob --sort-by=.status.startTime"
+
+alias kl="kubectl logs $1"
+
+alias kd="kubectl describe $1"
+alias kdp="kubectl describe pod/$1"
+alias kdj="kubectl describe job/$1"
+
+alias kcrb="kubectl get clusterrolebinding"
+
+alias kn="kubectl get nodes \"-o=custom-columns=NAME:.metadata.name,GPU:.status.allocatable.nvidia\.com/gpu\""
+alias kns="kubectl get ns"
+
+alias kasl="kubectl logs pod/$AS_POD -n kube-system --tail 100"
