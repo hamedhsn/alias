@@ -1,0 +1,9 @@
+[alias]
+        co = checkout
+        st = status
+        ci = commit
+        br = branch
+        cine = ci --amend --no-edit
+        addp = add -p
+        cob = checkout -b
+        hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
