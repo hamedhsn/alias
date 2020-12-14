@@ -37,3 +37,5 @@ alias kns="kubectl get ns"
 
 alias kasl="kubectl logs pod/$AS_POD -n kube-system --tail 100"
 alias kdebug="kubectl run -i --tty --rm debug --image=bitnami/minideb --restart=Never -- bash"
+alias ctx="kubectl ctx"
+alias ns="kubectl ns"
