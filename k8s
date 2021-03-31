@@ -30,6 +30,7 @@ alias kd="kubectl describe $1"
 alias kdp="kubectl describe pod/$1"
 alias kdj="kubectl describe job/$1"
 
+alias ksecret="kubectl get secret --sort-by=.metadata.creationTimestamp"
 alias kcrb="kubectl get clusterrolebinding"
 
 alias kn="kubectl get nodes \"-o=custom-columns=NAME:.metadata.name,GPU:.status.allocatable.nvidia\.com/gpu\""
